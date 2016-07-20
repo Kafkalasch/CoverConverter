@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Usage   ./myscript.sh -e conf -s /etc -l /usr/lib /etc/hosts 
-# Use -gt 1 to consume two arguments per pass in the loop (e.g. each
-# argument has a corresponding value to go with it).
-# Use -gt 0 to consume one or more arguments per pass in the loop (e.g.
-# some arguments don't have a corresponding value to go with it such
-# as in the --default example).
-# note: if this is set to -gt 0 the /etc/hosts part is not recognized ( may be a bug )
-
 usage="$(basename "$0") [-h] [-o pathToOutputDir] -f|-b image
 
 where:
@@ -49,7 +41,6 @@ done
 
 shift $((OPTIND-1))
 
-# tu iwas mit übrigen argumenten 
 
 # image has not been initialized or not declared
 if [ -z ${image+x} ]
