@@ -52,7 +52,7 @@ fi
 
 if [ "$front" -eq "1" ]
 then
-	convert "$image" -resize 2860x2860! -density 600x600 "$outputpath/front.png"
+	convert -units PixelsPerInch "$image" -resize 2860x2860! -density 600x600 "$outputpath/front.png"
 else
-	convert "$image" -resize 3567x2787! -density 600x600 "$outputpath/back.png"
+	convert -units PixelsPerInch "$image" -resize 3567x2787! -density 600x600 "$outputpath/back.png"
 fi
